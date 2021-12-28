@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
   background: #ffffff;
@@ -139,4 +140,101 @@ p {
 .article p {
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+
+  #site_title {
+      font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  #banner_wrapper{
+      padding: 0 1.2em;
+  }
+
+  .article > *{
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+  }
+
+  .padding-wrapper {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+  }
+
+  p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  p {
+      font-size: 1.0em;
+      line-height: 1.6em;
+  }
+
+  #banner-wrapper {
+      padding: 0 1em;
+  }
+
+  .article > *, #archive {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .padding-wrapper {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+}
+
+#sidebar {
+  min-height: 100%;
+  overflow:auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  width: 30%;
+  opacity: 95%;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.5);
+  transition: width .35s;
+}
+
+#sidebar.collapsed {
+  width: 0;
+}
+
+.sidebar-button {
+  margin: 10px 10px;
+  cursor:pointer;
+  outline:none;
+  border: none;
+  background-color: transparent;
+}
+
+.sidebar-button div{
+  width: 20px;
+  height: 4px;
+  background-color: #c9d1d9;
+  margin: 3px 0;
+  border-radius: 1px;
+}
+
+#close-sidebar-button {
+  float:right;
+}
+
+#open-sidebar-button {
+  position: absolute;
 }
