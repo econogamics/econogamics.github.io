@@ -1,13 +1,62 @@
+<!--
+  Note: You should not have to modify this file. (You are allowed to, but
+  not expected to.)
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>I am hosted with github pages</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, cum. Praesentium quia modi dolorem facere consequatur. Nemo alias ipsum, amet facilis assumenda quae maxime beatae fuga impedit non nihil deleniti.</p>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flashcards</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="flashcard-style.css"/>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
+
+    <script src="constants.js" defer></script>
+    <script src="flashcard.js" defer></script>
+    <script src="flashcard-screen.js" defer></script>
+    <script src="menu-screen.js" defer></script>
+    <script src="results-screen.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+
+    <div id="menu">
+      <div class="contents">
+        <header>
+          <h1>FLASHCARDS</h1>
+          <h2>Choose a card deck:</h2>
+        </header>
+        <div id="choices"></div>
+      </div>
+    </div>
+
+    <div id="main" class="inactive">
+      <div id="flashcard-container" touch-action="none"></div>
+
+      <div class="status">
+        <div><span class="correct"></span> right</div>
+        <div><span class="incorrect"></span> wrong</div>
+      </div>
+    </div>
+
+    <div id="results" class="inactive">
+      <h1>Results</h1>
+      <div><span class="percent"></span>%</div>
+      <div><span class="correct"></span> right</div>
+      <div><span class="incorrect"></span> wrong</div>
+      <div class="menu-buttons">
+        <button class="continue"></button>
+        <button class="to-menu">Back to menu</button>
+      </div>
+    </div>
+
+  </body>
 </html>
