@@ -140,6 +140,7 @@ p {
   margin:0;
   padding:0.7em 0;
   font-size: 1.2em;
+  text-align: justify;
 }
 
 .article p {
