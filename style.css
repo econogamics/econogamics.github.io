@@ -57,7 +57,7 @@ body {
   padding-right: 3rem;
 }
 
-#banner-wrapper, .bg_content, .pagination {
+#banner-wrapper {
   max-width: 44rem;
   padding: 0 3em 0 3em;
 }
@@ -202,8 +202,8 @@ p {
 
 @media only screen and (max-width: 450px) {
 
-  #banner_wrapper{
-      padding: 0 1.2em;
+  #banner-wrapper{
+      padding: 0 1.2rem;
   }
 
   .article > *{
@@ -234,7 +234,7 @@ p {
   }
 
   #banner-wrapper {
-      padding: 0 1em;
+      padding: 0 1rem;
   }
 
   .article > *, #archive {
