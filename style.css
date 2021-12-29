@@ -203,7 +203,7 @@ p {
 @media only screen and (max-width: 450px) {
 
   #banner-wrapper{
-      padding: 0 1.2rem;
+      padding: 0 1.2em;
   }
 
   .article > *{
@@ -234,7 +234,7 @@ p {
   }
 
   #banner-wrapper {
-      padding: 0 1rem;
+      padding: 0 1em;
   }
 
   .article > *, #archive {
