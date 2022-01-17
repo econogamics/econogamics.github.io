@@ -1,72 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Econogamics</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet" type="text/css" async>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500&display=swap" rel="stylesheet" async>
-    <link rel="stylesheet" href="style.css">
-    <script src="sidebar.js" defer></script>
-</head>
-<body>
-    <div id="sidebar" class="collapsed">
-        <button id="close-sidebar-button" class="sidebar-button" title="Close sidebar">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-    </div>
-    
-    <div id="main-container">
-        <button id="open-sidebar-button" class="sidebar-button" title="Toggle sidebar">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <section id="body">
-            <section id="banner">
-                <div id="banner-wrapper">
-                    <div id="banner-content">
-                        <div id="site-title">
-                            <a href="#">Utility</a>
-                        </div>
-                        <div id="navigation">
-                            <!--I don't want to use Blog and Archive as nav-->
-                        </div>
-                        <div id="social">
-                            <!--I don't want to use social-->
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🐕 dog park</title>
+    <script type="text/javascript" src="js/global-constants.js" defer></script>
+    <script type="text/javascript" src="js/sprite.js" defer></script>
+    <script type="text/javascript" src="js/character.js" defer></script>
+    <script type="text/javascript" src="js/dog-sprites.js" defer></script>
+    <script type="text/javascript" src="js/base-player.js" defer></script>
+    <script type="text/javascript" src="js/other-player.js" defer></script>
+    <script type="text/javascript" src="js/player.js" defer></script>
+    <script type="text/javascript" src="js/game.js" defer></script>
 
-            <section id="content">
-                <div class="article">
-                    <h1 class="post-title">Preference</h1>
-                    <div class="padding-wrapper">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis maxime numquam illo iure, ea possimus eius magni excepturi in delectus? Quia molestias reiciendis nemo aliquid beatae laborum iusto magni.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, qui. Accusamus facilis nulla voluptates tempore corrupti rerum minima quo sit non molestiae nam eum atque eaque quasi, aperiam magni hic?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestias accusamus sunt aliquid minus, cum reprehenderit, a tenetur sit ipsam dicta illo esse, quisquam dolores eveniet officiis unde tempore. Quia!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis incidunt quia officia quidem pariatur deleniti et assumenda libero voluptate iusto impedit harum, molestias cumque vitae, illo cupiditate aspernatur corporis eius?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, enim nemo? Distinctio iure hic fuga. Velit amet libero dolorum, aperiam rerum debitis, beatae consequuntur iure ut nihil veniam nobis inventore!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia nisi obcaecati ex? Consequatur earum atque, quam quis aut natus totam perferendis voluptatibus obcaecati. Esse aut ullam fuga dolores eaque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facilis maxime numquam illo iure, ea possimus eius magni excepturi in delectus? Quia molestias reiciendis nemo aliquid beatae laborum iusto magni.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, qui. Accusamus facilis nulla voluptates tempore corrupti rerum minima quo sit non molestiae nam eum atque eaque quasi, aperiam magni hic?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestias accusamus sunt aliquid minus, cum reprehenderit, a tenetur sit ipsam dicta illo esse, quisquam dolores eveniet officiis unde tempore. Quia!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis incidunt quia officia quidem pariatur deleniti et assumenda libero voluptate iusto impedit harum, molestias cumque vitae, illo cupiditate aspernatur corporis eius?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, enim nemo? Distinctio iure hic fuga. Velit amet libero dolorum, aperiam rerum debitis, beatae consequuntur iure ut nihil veniam nobis inventore!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia nisi obcaecati ex? Consequatur earum atque, quam quis aut natus totam perferendis voluptatibus obcaecati. Esse aut ullam fuga dolores eaque.</p>
+    <script type="text/javascript" src="sprite-script.js" defer></script>
 
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <section id="footer">
-            Copyright &copy; 2021 Econogamics
-        </section>
-    </div>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <div id="world-container">
+        <canvas id="foreground"></canvas>
+        <div id="action-controls" class="controls">
+          <button id="look-button">🐶</button>
+          <button id="dance-button">⑁</button>
+          <button id="help-button">?</button>
+          <button id="sleep-button">💤</button>
+          <button id="ball-button">🎾</button>
+        </div>
+        <div id="movement-controls" class="controls">
+          <button id="up-button">↑</button>
+          <button id="down-button">↓</button>
+          <button id="left-button">←</button>
+          <button id="right-button">→</button>
+        </div>
+        <div id="about" hidden>
+          <h1>dog park sim</h1>
+          <p>
+            this dog park was made by vrk for the one and only sean o'brien! for glitch secret snowman 2019 ☃️
+            (<a href="https://github.com/vrk/dog-park-sim">source</a>).
+          </p>
+          <h1>dog sprites</h1> 
+          <p>
+            not made by vrk! by spacesheepcaptain
+            for a <a href="https://www.nexusmods.com/stardewvalley/mods/1853">stardew valley dog mod</a>
+            🙏
+          </p>
+        </div>
+      </div>
+  </body>
 </html>

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  font-size: 12pt;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("https://cdn.glitch.com/afb4e21d-a522-44da-968a-450ee7cfed33%2Fpixelgrass.jpg?v=1576995002396");
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+}
+
+#action-controls,
+#movement-controls {
+  bottom: 0;
+  height: 100px;
+  flex-direction: row;
+}
+
+#action-controls {
+  top: 0;
+}
+
+#action-controls button,
+#movement-controls button {
+  height: 50px;
+  width: 60px;
+  padding: 0;
+}
+
+#world-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #4285f4;
+  border: 2px solid #3652D3;
+  color: white;
+  font-family: monospace;
+  margin: 5px;
+  font-size: 24pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  touch-action: manipulation;
+}
+
+button.pressed {
+  background-color: #3652D3;
+}
+
+button:hover {
+  border: 2px solid white;
+}
+
+button:disabled,
+button:disabled:hover {
+  border: 2px solid #727272;
+  background-color: #B8B8B8;
+}
+
+#about h1, 
+#about p {
+  margin: 0.5em 1em;
+}
+
+#about {
+  z-index: 10;
+  border-radius: 10px;
+  background-color: #9588EA;
+  max-width: 90%;
+  width: 600px;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 10px;
+  color: white;
+  border: 2px solid #7263da;
+}
+
+#about h1 {
+  font-size: 1em;
+  text-align: center;
+}
+
+a, a:hover {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
